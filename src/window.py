@@ -178,7 +178,7 @@ class SudokuWindow(Adw.ApplicationWindow):
         self.primary_menu_button.popup()
 
     def on_show_preferences(self, *_):
-        PreferencesDialog(self, self.manager.board.save_to_file).present()
+        PreferencesDialog(self.manager.board.save_to_file).present(self)
 
     def _on_window_pressed(self, gesture, n_press, x, y):
         if gesture.get_current_button() != 1:
